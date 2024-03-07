@@ -2,7 +2,7 @@
 
 int main() {
     int a[] = {0, 1, 2};
-    char b[] = "ABC";
+    char b[] = "A B C";
     float c[] = {1.1, 1.2, 1.3};
     FILE *file;
 
@@ -22,7 +22,7 @@ int main() {
 
     file = fopen("a.bin", "rb");
     if (file == NULL) {
-        printf("無法開啟檔案\n");
+        printf("無法開啟檔案。\n");
         return 1;
     }
 
@@ -33,7 +33,7 @@ int main() {
 
 
     fread(readInt, sizeof(int), 3, file);
-    fread(readChar, sizeof(char), 4, file);
+    fread(readChar, sizeof(char), 5, file);
     fread(readFloat, sizeof(float), 3, file);
     fclose(file);
 
@@ -54,4 +54,3 @@ int main() {
 
     return 0;
 }
-
