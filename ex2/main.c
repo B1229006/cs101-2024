@@ -22,7 +22,7 @@ int main() {
 
     file = fopen("a.bin", "rb");
     if (file == NULL) {
-        printf("無法開啟檔案。\n");
+        printf("無法開啟檔案\n");
         return 1;
     }
 
